@@ -1,17 +1,20 @@
 {
   "name": "calculateDivisors",
   "version": "1.0.0",
-  "description": "",
+  "description": "The challenge is to implement a function which adds all the multiples of three and five below a certain number",
   "main": "calculateDivisors.js",
   "scripts": {
     "test": "mocha ./spec",
     "lint": "eslint ./"
   },
   "devDependencies": {
-    "chai": "^1.8.1",
+    "chai": "^1.10.0",
     "eslint": "^3.19.0"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^4.0.1"
+  }
 }
