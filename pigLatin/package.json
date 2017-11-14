@@ -7,10 +7,14 @@
     "lint": "eslint ./"
   },
   "devDependencies": {
-    "chai": "^1.8.1",
+    "chai": "^1.10.0",
     "eslint": "^3.19.0"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": "In this kata you will write a function that translates English strings into Pig Latin.",
+  "dependencies": {
+    "mocha": "^4.0.1"
+  }
 }
