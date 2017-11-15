@@ -9,5 +9,6 @@ describe('calculateDivisors()', function () {
     expect(calculateDivisors(6)).to.equal(8);
     expect(calculateDivisors(10)).to.equal(23);
     expect(calculateDivisors(12)).to.equal(33);
+    expect(calculateDivisors(15)).to.equal(45);
   });
 });
