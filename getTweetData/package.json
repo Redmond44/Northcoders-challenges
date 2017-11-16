@@ -7,10 +7,14 @@
     "lint": "eslint ./"
   },
   "devDependencies": {
-    "chai": "^1.8.1",
+    "chai": "^1.10.0",
     "eslint": "^3.19.0"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": "The challenge is to implement which returns us an object containing data from a tweet",
+  "dependencies": {
+    "mocha": "^4.0.1"
+  }
 }
