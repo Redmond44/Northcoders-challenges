@@ -19,7 +19,7 @@ var getTweetData = function (tweet) {
   // tweetData.mentions = tweet.split(' ').reduce((acc, word) => {
   //   if (word[0] === '@') {
   //     tweetData.tagCount += 1;
-  //     return acc.push(word);git sta
+  //     return acc.push(word);
   //   }
   //   return acc;
   // }, []);
