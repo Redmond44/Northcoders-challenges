@@ -4,22 +4,24 @@ var expect = require('chai').expect;
 var {pigLatin} = require(path.join(__dirname, '..', './pigLatin.js'));
 
 describe('pigLatin()', function () {
-  'use strict';
-  it('return vowel + "way" for single vowel', function () {
+  it('returns vowel + "way" for a single vowel', function () {
     expect(pigLatin('a')).to.equal('away');
     expect(pigLatin('i')).to.equal('iway');
   });
-  it('return consonant + "ay" for single consonant', function () {
+  it('returns consonant + "ay" for a single consonant', function () {
     expect(pigLatin('n')).to.equal('nay');
     expect(pigLatin('b')).to.equal('bay');
   });
-  it('return str + "way" for string starts with a vowel', function () {
+  it('returns word + "way" if word starts with a vowel', function () {
     expect(pigLatin('algorithm')).to.equal('algorithmway');
   });
-  it('move starting consonant to the end and append "ay" for strings with one consonant at the beginning', function () {
+  it('moves starting consonant to the end and append "ay" for words with one consonant at the beginning', function () {
     expect(pigLatin('northcoders')).to.equal('orthcodersnay');
   });
-  it('move all starting consonants to the end and append "ay" for strings with few consonants at the beginning', function () {
+  it('moves all starting consonants to the end and append "ay" for words with few consonants at the beginning', function () {
     expect(pigLatin('sheffield')).to.equal('effieldshay');
+  });
+  it('works for sentences', function () {
+    expect(pigLatin('keep on coding')).to.equal('eepkay onway odingcay');
   });
 });
