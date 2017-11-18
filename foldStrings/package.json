@@ -9,13 +9,9 @@
   "devDependencies": {
     "chai": "^1.8.1",
     "eslint": "^3.19.0"
-<<<<<<< HEAD
   },
   "description": "The challenge is to implement a function which takes a string of any length and turns each word inside out while keeping the order of the words intact.",
   "main": "foldStrings.js",
   "author": "",
   "license": "ISC"
-=======
-  }
->>>>>>> 170e9047962050cbe17836c56f29a44d220474de
 }

@@ -2,6 +2,7 @@
 function foldString(str) {
   if (typeof str !== 'string') return '';
   const arrOfWords = str.split(' ');
+  
   return arrOfWords.map((word) => {
     let length = word.length;
     let middle = length / 2;
@@ -15,9 +16,8 @@ function foldString(str) {
       newWord.push(word.slice(Math.floor(middle), Math.floor(middle) + 1));
       newWord.push(word.slice(Math.floor(middle) + 1));
     }
-    return newWord.map((element) => element.split('').reverse().join(''))
-    .join('');
-  }).join(' ');  
+    return newWord.map((element) => element.split('').reverse().join('')).join('');
+  }).join(' ');
 }
 
 
