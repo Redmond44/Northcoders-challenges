@@ -1,22 +1,16 @@
 var pigLatin = function (str) {
   // in this case 'y' is considered to be a consonant
-  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  const vowels = /[aeiou]/i;
   const arrOfWords = str.split(' ');
 
   return arrOfWords.map((word) => {
-    if (vowels.includes(word[0])) return word + 'way';
+    if (word[0].match(vowels)) return word + 'way';
     else {
-      const index = function (str) {
-        for (let i = 0; i < str.length; i++) {
-          if (vowels.includes(str.charAt(i))) {
-            return i;
-          }
-        }
-      };
-      if (index(word) === undefined) return word + 'ay';
-      return word.slice(index(word)) + word.slice(0, index(word)) + 'ay';
+      const firstVowelIndex = word.search(vowels);
+      if (firstVowelIndex === undefined) return word + 'ay';
+      return word.slice(firstVowelIndex) + word.slice(0, firstVowelIndex) + 'ay';
     }
-  }).join(' ');  
+  }).join(' ');
 };
 
 if (typeof module !== 'undefined') {
