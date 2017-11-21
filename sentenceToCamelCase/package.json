@@ -1,0 +1,15 @@
+{ 
+  "version": "1.0.0",
+  "name": "002-sentence-to-camel-case",
+  "scripts": {
+    "test": "mocha ./spec",
+    "lint": "eslint ./"
+  },
+  "devDependencies": {
+    "chai": "^1.8.1",
+    "eslint": "^3.19.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
