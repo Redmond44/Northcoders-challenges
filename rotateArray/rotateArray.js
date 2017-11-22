@@ -1,8 +1,13 @@
-// Please do not change the name of this function
 var rotateArray = function (arr, num) {
-  // your code goes here
+  let newStartIndex;
+
+  if (num >= 0) newStartIndex = arr.length - num;
+  if (num < 0) newStartIndex = Math.abs(num);
+
+  let newArr = arr.slice(newStartIndex).concat(arr.slice(0, newStartIndex));
+  return newArr;
 };
 
-if ( typeof module !== 'undefined' ) {
-  module.exports = {rotateArray};
+if (typeof module !== 'undefined') {
+  module.exports = { rotateArray };
 }
