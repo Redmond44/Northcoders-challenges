@@ -1,7 +1,7 @@
 var path = require('path');
 var expect = require('chai').expect;
 
-var {sentenceToCamelCase} = require(path.join(__dirname, '..', './sentenceToCamelCase.js'));
+var { sentenceToCamelCase, sentenceFromCamelCase } = require(path.join(__dirname, '..', './sentenceToCamelCase.js'));
 
 describe('sentenceToCamelCase()', function () {
   it('returns the same word for single word input', function () {
@@ -23,5 +23,14 @@ describe('sentenceToCamelCase()', function () {
     expect(sentenceToCamelCase('this sentence', true)).to.equal('ThisSentence');
     expect(sentenceToCamelCase('This sentence', true)).to.equal('ThisSentence');
     expect(sentenceToCamelCase('This Bigger strange Sentence', true)).to.equal('ThisBiggerStrangeSentence');
+  });
+});
+
+describe('sentenceFromCamelCase()', function () {
+  it('returns the same word for single word input as a sentence', function () {
+    expect(sentenceFromCamelCase('this')).to.equal('This.');
+  });
+  it('returns few-word sentence if complex input', function () {
+    expect(sentenceFromCamelCase('thisBiggerStrangeSentence')).to.equal('This bigger strange sentence.');
   });  
 });
