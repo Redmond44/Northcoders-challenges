@@ -15,4 +15,10 @@ describe('rotateArray()', function () {
     expect(rotateArray([1,2,3], -1)).to.eql([2,3,1]);
     expect(rotateArray([1,2,3,4,5], -3)).to.eql([4,5,1,2,3]);
   });
+  it('returns unchanged array if absolute value of second argument is equal or greater than array length', function () {
+    expect(rotateArray([1, 2, 3], 3)).to.eql([1, 2, 3]);
+    expect(rotateArray([1, 2, 3], 7)).to.eql([1, 2, 3]);
+    expect(rotateArray([1, 2, 3], -3)).to.eql([1, 2, 3]);
+    expect(rotateArray([1, 2, 3], -7)).to.eql([1, 2, 3]);
+  });
 });
