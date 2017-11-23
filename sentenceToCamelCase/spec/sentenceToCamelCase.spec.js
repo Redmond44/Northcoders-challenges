@@ -22,7 +22,7 @@ describe('sentenceToCamelCase()', function () {
   });
   it('works if word contains capital letters', function () {
     expect(sentenceToCamelCase('THIS', true)).to.equal('This');
-    expect(sentenceToCamelCase('BOOK', true)).to.equal('Book');
+    expect(sentenceToCamelCase('BOOK', false)).to.equal('book');
     expect(sentenceToCamelCase('THIS SENTENCE', true)).to.equal('ThisSentence');
   });
 });
