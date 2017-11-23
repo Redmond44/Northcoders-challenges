@@ -1,4 +1,5 @@
 var sentenceToCamelCase = function (str, isUpperCase) {
+  // mozna uzyc regExpresion
   return str.split(' ').map((word, index) => {
     if (!isUpperCase && index === 0) return word.toLowerCase();
     return word[0].toUpperCase() + word.slice(1).toLowerCase();
