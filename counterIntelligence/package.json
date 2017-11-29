@@ -1,0 +1,16 @@
+{
+  "name": "counter-intelligence",
+  "version": "1.0.0",
+  "description": "",
+  "main": "counterIntelligence.js",
+  "scripts": {
+   "test": "mocha ./spec",
+   "lint": "eslint ./"
+ },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0"
+  }
+}
