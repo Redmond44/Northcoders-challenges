@@ -1,0 +1,17 @@
+{
+  "name": "validTriangles-solution",
+  "version": "1.0.0",
+  "description": "For this kata you need to create a function that takes an array of triangles. Each triangle is represented as an array e.g. `[10, 12, 22]` where the three numbers are the sides of the triangle. The function should return the count of triangles that are valid.",
+  "main": "validTriangles.js",
+  "scripts": {
+    "test": "mocha ./spec",
+    "lint": "eslint ./"
+  },
+  "devDependencies": {
+    "chai": "^1.8.1",
+    "eslint": "^3.19.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
