@@ -13,7 +13,12 @@ function validTriangles(arr) {
   let counter = 0;
   arr.forEach((element) => {
     const sortedArr = element.sort((a, b) => a - b);
-    if (sortedArr[0] + sortedArr[1] > sortedArr[2]) counter++;
+
+    const allNumbers = sortedArr.every((side) => { 
+      return typeof side === 'number';
+    });
+
+    if (allNumbers && sortedArr[0] + sortedArr[1] > sortedArr[2]) counter++;
   });
   return counter;
 }

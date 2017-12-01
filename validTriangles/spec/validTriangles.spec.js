@@ -7,6 +7,12 @@ describe('validTriangles', function () {
     });
     it('returns 0 for an empty array', function () {
         expect(validTriangles([])).to.equal(0);
+        expect(validTriangles([[]])).to.equal(0);
+    });
+    it('returns 0 if invalid side', function () {
+        expect(validTriangles([[10, 2, 'hij']])).to.equal(0);
+        expect(validTriangles([[10, true, 10]])).to.equal(0);
+        expect(validTriangles([[true, true, true]])).to.equal(0);
     });
     it('returns 0 for single invalid triangle', function () {
         expect(validTriangles([[5, 10, 25]])).to.equal(0);
