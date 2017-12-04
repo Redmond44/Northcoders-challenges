@@ -8,6 +8,6 @@ The function should be able to to work with both strings and arrays, and should 
 
 [1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 1, 1] would return [1, 2, 3, 1];
 
-'AaAAABBBCCCc' would return ['A', 'a', 'B', 'C', 'c'];
+'AaAAABBBCCCc' would return ['A', 'a', 'A', 'B', 'C', 'c'];
 
 'nnoorrtthhccooddeerrss' would return ['n', 'o', 'r', 't', 'h', 'c', 'o', 'd', 'e', 'r', 's'];
