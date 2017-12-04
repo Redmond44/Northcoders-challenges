@@ -63,7 +63,7 @@ Special characters: ! @ £ # $ % ^ & *
     </tr>
     <tr>
         <td>7</td>
-        <td>More than eight characters includes a number and special character</td>
+        <td>More than twelve characters includes a number and special character</td>
         <td>bobbobbob1!2@3#</td>
     </tr>
     </tbody>
