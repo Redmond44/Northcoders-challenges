@@ -1,7 +1,6 @@
-// Please do not change the name of this function
-
-function counterSpy () {
-
+function counterSpy(arr) {
+  const regExp = /[spy]/i;
+  return arr.filter(name => !regExp.test(name)).sort();
 }
 
-module.exports = {counterSpy};
+module.exports = { counterSpy };
