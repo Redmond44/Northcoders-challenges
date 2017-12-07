@@ -1,10 +1,9 @@
-// Please do not change the name of this function
 var validateAndFormatPhone = function (number) {
-  if(!number){
-    return new Error('Invalid phone number');
-  }
+  const validRegExp = /^(0044|\+44|0)[127]\d{9}$/;
+  if (validRegExp.test(number)) return number.replace(/^0044|\+44|0/, '+44');
+  return new Error('Invalid phone number');
 };
 
-if ( typeof module !== 'undefined' ) {
-  module.exports = {validateAndFormatPhone};
+if (typeof module !== 'undefined') {
+  module.exports = { validateAndFormatPhone };
 }

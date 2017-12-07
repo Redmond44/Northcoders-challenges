@@ -7,7 +7,7 @@ The challenge is to implement a function which takes a string which should be a 
 * The phone number can be "valid" in many formats: +4407, 004402, 07, 01, 02
 * Our application only accepts private phone numbers (07, 01, 02)
 * we are using [Twilio](https://www.twilio.com/) to text our customers when they place an order
-* Twilio required numbers to be sent to their API in 00447... format
+* Twilio required numbers to be sent to their API in +447... format
 * Once a number has been validated it must be changed to the format Twilio requires
 
 ##### examples
