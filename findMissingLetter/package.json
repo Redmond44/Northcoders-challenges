@@ -1,0 +1,13 @@
+{
+  "name": "findMissingLetter",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "test": "mocha ./spec",
+    "lint": "eslint ./"
+  },
+  "devDependencies": {
+    "chai": "^1.8.1",
+    "eslint": "^3.19.0"
+  }
+}
