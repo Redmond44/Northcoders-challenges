@@ -1,7 +1,6 @@
-// Please do not change the name of these functions
 var everyContainsSomeTest = {
-  every: function () {
-
+  every: function (list, predicate, context) {
+    return true;
   },
   contains: function () {
 
