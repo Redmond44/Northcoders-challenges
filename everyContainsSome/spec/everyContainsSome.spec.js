@@ -20,4 +20,9 @@ describe('everyContainsSomeTest()', function () {
     expect(everyContainsSomeTest.every([])).to.equal(true);
     expect(everyContainsSomeTest.every('')).to.equal(true);
   });
+  it('returns true if no falsy elements in the list (no predicate)', () => {
+    expect(everyContainsSomeTest.every({a: 10})).to.equal(true);
+    expect(everyContainsSomeTest.every([1, 2, 3])).to.equal(true);
+    expect(everyContainsSomeTest.every('apple')).to.equal(true);
+  });
 });
