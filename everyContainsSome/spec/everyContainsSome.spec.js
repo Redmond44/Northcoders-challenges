@@ -15,4 +15,9 @@ describe('everyContainsSomeTest()', function () {
     expect(everyContainsSomeTest.every(23)).to.equal(true);
     expect(everyContainsSomeTest.every(0)).to.equal(true);
   });
+  it('returns true if an empty list argument given (no predicate)', () => {
+    expect(everyContainsSomeTest.every({})).to.equal(true);
+    expect(everyContainsSomeTest.every([])).to.equal(true);
+    expect(everyContainsSomeTest.every('')).to.equal(true);
+  });
 });
