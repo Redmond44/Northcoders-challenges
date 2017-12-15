@@ -2,8 +2,7 @@
   "name": "alphabet-replace",
   "private": true,
   "version": "0.0.0",
-  "dependencies": {
-  },
+  "dependencies": {},
   "scripts": {
     "test": "mocha ./spec",
     "lint": "eslint ./"
