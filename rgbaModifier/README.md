@@ -4,7 +4,7 @@ rgbaModifier is a function that takes three arguments, a rgba string, a percent 
 
 The percentage can also be a negative number. E.g. a percentage of 50 should increase each RGB value by 50%, and a percentage of -50 should decrease each RGB value by 50%.
 
-RGB values should be rounded integers and should not be above 225 or below 0.
+RGB values should be rounded integers and should not be above 255 or below 0.
 
 ##### examples
 
