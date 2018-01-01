@@ -1,13 +1,16 @@
 {
-  "name": "subArray-sum",
-  "private": true,
-  "version": "0.0.0",
+  "name": "subarrsum",
+  "version": "1.0.0",
+  "description": "The maximum sum subarray problem consists of finding the maximum sum of any subsequence of consecutive numbers in an array or list of integers.",
+  "main": "subArrSum.js",
   "scripts": {
     "test": "mocha ./spec",
     "lint": "eslint ./"
   },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "chai": "^1.8.1",
-    "eslint": "^3.19.0"
-  },
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
 }
