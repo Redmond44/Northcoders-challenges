@@ -9,5 +9,8 @@
   "devDependencies": {
     "chai": "^1.8.1",
     "eslint": "^3.19.0"
+  },
+  "dependencies": {
+    "binarysearch": "^1.0.0"
   }
 }
