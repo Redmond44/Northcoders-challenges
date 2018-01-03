@@ -3,7 +3,7 @@
 The challenge is to traverse an array by following some given directions.
 
 The function takes 2 arguments:
-  1. An array containing arrays of students students
+  1. An array containing arrays of students
   2. An array of directions.
 
 You need to return an array of all of the students you have hovered over.
