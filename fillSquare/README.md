@@ -39,6 +39,7 @@ fillSquare(square)
     [1, 2, 3, 4, 5, 6],
     [1, null, null, null, null, null],
     [null, null, null, null, null, null],
+    [null, null, null, null, null, null],
     [null, null, null, null, null, null]
   ]
 */
@@ -61,6 +62,7 @@ fillSquare(square)
     [1, 2, 3, null, null, null],
     [1, 2, 3, null, null, null],
     [1, null, null, null, null, null],
+    [null, null, null, null, null, null],
     [1, 2, 3, null, null, null],
     [1, null, null, null, null, null]
   ]
