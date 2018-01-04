@@ -8,11 +8,10 @@ function fillSquare(nestedArr) {
   // making a square
   for (let j = 0; j < maxLength; j++) {
     if (!nestedArr[j]) nestedArr.push([]);
-    for (let i = 0; i < maxLength; i++) {
-      if (nestedArr[j][i] === undefined) nestedArr[j][i] = null;
+    for (let i = nestedArr[j].length; i < maxLength; i++) {
+      nestedArr[j][i] = null;
     }
   }
-
   return nestedArr;
 }
 

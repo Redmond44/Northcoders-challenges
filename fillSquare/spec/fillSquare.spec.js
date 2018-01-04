@@ -4,9 +4,10 @@ const { fillSquare } = require('../fillSquare');
 describe('fillSquare', function () {
   it('returns the same array if it is a square', () => {
     expect(fillSquare([[1]])).to.eql([[1]]);
-    expect(fillSquare([[1, 2], [3, 4]])).to.eql([[1, 2], [3, 4]]);
+    expect(fillSquare([[undefined, 2], [3, 4]])).to.eql([[undefined, 2], [3, 4]]);
   });
   it('adds null if more nested arrays than elements', () => {
+    expect(fillSquare([[]])).to.eql([[null]]);
     const arr = [[1], [3]];
     expect(fillSquare(arr)).to.eql([[1, null], [3, null]]);
   });
