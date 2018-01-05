@@ -34,7 +34,7 @@ parseHexInt('f')
 
 ```javascript
 parseHexInt('17f')
-// --> 183
+// --> 383
 ```
 
 ```javascript
