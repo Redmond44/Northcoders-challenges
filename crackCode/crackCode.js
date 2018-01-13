@@ -1,7 +1,9 @@
+const _ = require('underscore');
+
 const crackCode = function (code) {
   const regex = /^(([a-z]+-)+[a-z]+)(-\d+)*\((\w+)\)$/;
 
-  // preliminary check
+  // preliminary check - if bracket-code in alphabetical order
   const bracketsCode = code.match(regex)[4];
   if (bracketsCode !== bracketsCode.split('').sort().join(''))
     return false;
@@ -9,34 +11,25 @@ const crackCode = function (code) {
   // MAIN CHECK
   const outsideBracketsCode = code.match(regex)[1].split('-');
 
-  // specify the number of occurrences of each letter
+  // count each letter
   const lettersCounter = outsideBracketsCode.reduce((acc, element) => {
-    if (acc[element.length])
-      acc[element.length] += element[0];
-    else
-      acc[element.length] = element[0];
+    acc.push({
+      occurrence: element.length,
+      letter: element[0]
+    });
 
     return acc;
-  }, {});
+  }, []);
 
-  // find the greatest occurrence
-  const keys = Object.keys(lettersCounter);
-  const theMostCommon = Math.max(...keys);
+  const sortedOccurrances = _.sortBy(_.sortBy(lettersCounter, 'letter').reverse(), 'occurrence').reverse();
 
-  // construct the correct code
   let matchingCode = '';
-  let i = theMostCommon;
-
-  do {
-    if (lettersCounter[i])
-      matchingCode += lettersCounter[i].split('').sort().join('');
-    i--;
-  } while (matchingCode.length < 4);
-
-  matchingCode = matchingCode.slice(0, 4).split('').sort().join('');
+  for (let i = 0; i < 4; i++) {
+    matchingCode += sortedOccurrances[i].letter;
+  }
+  matchingCode = matchingCode.split('').sort().join('');
 
   if (matchingCode === bracketsCode) return true;
-
   return false;
 };
 

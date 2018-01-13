@@ -9,5 +9,8 @@
   "devDependencies": {
     "chai": "^1.8.1",
     "eslint": "^3.19.0"
+  },
+  "dependencies": {
+    "underscore": "^1.8.3"
   }
 }
