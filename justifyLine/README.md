@@ -33,7 +33,7 @@ justifyLine(str, 18);
 In this example the max line length is 20 characters. The original string has 15 characters so there are 5 more spaces that we need to use to pad the words. Larger gaps should go first, so 2 additional spaces are inserted in the first 2 gaps, and the final gap has 1 additional space.
 
 ```javascript
-const str = 'foo  foo  foo  foo';
+const str = 'foo foo foo foo';
 
 justifyLine(str, 20);
 --> 'foo   foo   foo  foo'
