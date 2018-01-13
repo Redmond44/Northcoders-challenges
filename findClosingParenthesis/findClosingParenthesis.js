@@ -1,18 +1,18 @@
 const findClosingParenthesis = function (str, n) {
-  let number = 0;
-  const refObj = {
+  let currentParenthesis = 0;
+  const countingObj = {
     '(': 0,
     ')': 0
   };
 
   for (let i = 0; i < str.length; i++) {
-    if (str[i] === '(' && number !== n) number++;
+    if (str[i] === '(' && currentParenthesis !== n) currentParenthesis++;
 
-    if (number === n) {
-      if (str[i] === '(') refObj['(']++;
-      if (str[i] === ')') refObj[')']++;
+    if (currentParenthesis === n) {
+      if (str[i] === '(') countingObj['(']++;
+      if (str[i] === ')') countingObj[')']++;
 
-      if (refObj['('] === refObj[')']) return i;
+      if (countingObj['('] === countingObj[')']) return i;
     }
   }
 
