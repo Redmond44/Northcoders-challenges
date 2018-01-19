@@ -27,7 +27,7 @@ And an array representing three blue pixels with 100% opacity, then 1 red pixel 
 
 You could compress this sequence of data using a run-length encoding technique like this:
 
-`[3, 255, 255, 255, 0, 1, 29, 93, 242, 255, 2, 0, 0, 0, 255]`
+`[3, 29, 93, 242, 255, 1, 245, 12, 51, 77, 2, 0, 0, 0, 255]`
 
 Where each sequence of 5 numbers now represents firstly the quanity of pixels of the same colour in the run, followed by the four values for the pixel data.
 
