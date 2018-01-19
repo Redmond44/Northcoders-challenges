@@ -1,0 +1,16 @@
+{
+  "name": "md5Hashing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ./",
+    "test": "mocha ./spec"
+  },
+  "keywords": [],
+  "author": "Mauro Gestoso <mauro@northcoders.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0"
+  }
+}
