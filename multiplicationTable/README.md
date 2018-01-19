@@ -7,7 +7,9 @@ For this kata you should complete the function `multiplicationTable` which takes
 ```javascript
 multiplicationTable(0);
 /*
-  []
+  [
+    [0]
+  ]
 */
 ```
 
