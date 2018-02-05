@@ -39,7 +39,7 @@ The rules are as follows:
 
 Let's say the door ID is `northcoders`. If we MD5-hash it followed by the number `0`, we obtain the digest `e90e02b80bb291cf6b9ce5fa9c7b3322` (in hexadecimal). This digest is not interesting because it doesn't start with four zeros.
 
-If we continue searching for hashes by incrementing the numerical index the first interesting digest we find is `0000aca1ab3d6198abc63b77fcd8f1fe` at index `58291` (i.e. MD5-hashing the string `northcoders58291`). This means that the first character of the password is `a` because it's the character right after the four zeros.
+If we continue searching for hashes by incrementing the numerical index the first interesting digest we find is `0000aca1ab3d6198abc63b77fcd8f1fe` at index `58290` (i.e. MD5-hashing the string `northcoders58290`). This means that the first character of the password is `a` because it's the character right after the four zeros.
 
 ## Task
 

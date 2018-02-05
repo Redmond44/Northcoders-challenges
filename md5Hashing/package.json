@@ -11,6 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^3.5.0",
-    "eslint": "^3.19.0"
+    "eslint": "^3.19.0",
+    "supertest": "^3.0.0"
+  },
+  "dependencies": {    
   }
 }
