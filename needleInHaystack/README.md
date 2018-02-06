@@ -51,7 +51,7 @@ You can use these examples to start building up your test suite
 ```javascript
     var needle = "M40"
     needleHaystack(haystack, needle);
-    // -> ["address.postcode"]
+    // -> ["contactDetails.address.postcode"]
 ```
 
 ```javascript
