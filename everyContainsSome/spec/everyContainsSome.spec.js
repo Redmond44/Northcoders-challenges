@@ -49,7 +49,7 @@ describe('everyContainsSomeTest()', function () {
     expect(everyContainsSomeTest.every(testingObj, predicate)).to.equal(true);
     expect(everyContainsSomeTest.every(testingStr, predicate)).to.equal(true);
   });
-  it('returns false if at least of the values in the list not pass the predicate truth test', () => {
+  it('returns false if at least one of the values in the list not pass the predicate truth test', () => {
     const predicate = function (num) { return num % 2 === 0; };
     const testingArr = [2, 5, 6];
     const testingObj = { a: 0, b: 4, c: 7 };
@@ -57,5 +57,22 @@ describe('everyContainsSomeTest()', function () {
     expect(everyContainsSomeTest.every(testingArr, predicate)).to.equal(false);
     expect(everyContainsSomeTest.every(testingObj, predicate)).to.equal(false);
     expect(everyContainsSomeTest.every(testingStr, predicate)).to.equal(false);
+  });
+  it('predicate takes an index as second argument', () => {
+    const predicate = function (num, i) { return i == num; };
+    const testingArr = [2, 5, 6];
+    const testingArr1 = [0, 1, 2];
+    const testingObj = { a: 0, b: 4, c: 7 };
+    const testingObj1 = { a: 0, b: 1, c: 2 };
+    const testingObj2 = { 0: 0, 1: 1, 2: 2 };
+    const testingStr = '2413';
+    const testingStr1 = '0123';
+    expect(everyContainsSomeTest.every(testingArr, predicate)).to.equal(false);
+    expect(everyContainsSomeTest.every(testingArr1, predicate)).to.equal(true);
+    expect(everyContainsSomeTest.every(testingObj, predicate)).to.equal(false);
+    expect(everyContainsSomeTest.every(testingObj1, predicate)).to.equal(false);
+    expect(everyContainsSomeTest.every(testingObj2, predicate)).to.equal(true);
+    expect(everyContainsSomeTest.every(testingStr, predicate)).to.equal(false);
+    expect(everyContainsSomeTest.every(testingStr1, predicate)).to.equal(true);
   });
 });
