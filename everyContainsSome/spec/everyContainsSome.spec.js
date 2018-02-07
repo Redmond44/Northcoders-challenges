@@ -45,7 +45,7 @@ describe('everyContainsSomeTest()', function () {
     const testingArr = [2, 4, 6];
     const testingObj = { a: 0, b: 4, c: 6 };
     const testingStr = '2460';
-    // expect(everyContainsSomeTest.every(testingArr, predicate)).to.equal(true);
+    expect(everyContainsSomeTest.every(testingArr, predicate)).to.equal(true);
     expect(everyContainsSomeTest.every(testingObj, predicate)).to.equal(true);
     expect(everyContainsSomeTest.every(testingStr, predicate)).to.equal(true);
   });
@@ -74,5 +74,14 @@ describe('everyContainsSomeTest()', function () {
     expect(everyContainsSomeTest.every(testingObj2, predicate)).to.equal(true);
     expect(everyContainsSomeTest.every(testingStr, predicate)).to.equal(false);
     expect(everyContainsSomeTest.every(testingStr1, predicate)).to.equal(true);
+  });
+  it('predicate takes a list as third argument', () => {
+    const predicate = function (num, i, list) { return num === list[i]; };
+    const testingArr = [2, 5, 6];
+    const testingObj = { a: 0, b: 4, c: 7 };
+    const testingStr = '2413';
+    expect(everyContainsSomeTest.every(testingArr, predicate)).to.equal(true);
+    expect(everyContainsSomeTest.every(testingObj, predicate)).to.equal(true);
+    expect(everyContainsSomeTest.every(testingStr, predicate)).to.equal(true);
   });
 });
