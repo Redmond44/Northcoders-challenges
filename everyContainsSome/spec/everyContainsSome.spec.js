@@ -139,5 +139,25 @@ describe('everyContainsSomeTest()', function () {
       expect(everyContainsSomeTest.some(testingObj, predicate)).to.equal(false);
       expect(everyContainsSomeTest.some(testingStr, predicate)).to.equal(false);
     });
+    it('predicate takes an index as second argument', () => {
+      const predicate = function (num, i) { return i == num; };
+      const testingArr = [2, 5, 6];
+      const testingArr1 = [0, 1, 2];
+      const testingObj = { a: 0, b: 4, c: 7 };
+      const testingObj1 = { a: 0, b: 1, c: 2 };
+      const testingObj2 = { 0: 0, 1: 1, 2: 2 };
+      const testingStr = '2413';
+      const testingStr1 = '0123';
+      const testingStr2 = '2419';
+      expect(everyContainsSomeTest.some(testingArr, predicate)).to.equal(false);
+      expect(everyContainsSomeTest.some(testingArr1, predicate)).to.equal(true);
+      expect(everyContainsSomeTest.some(testingObj, predicate)).to.equal(false);
+      expect(everyContainsSomeTest.some(testingObj1, predicate)).to.equal(false);
+      expect(everyContainsSomeTest.some(testingObj2, predicate)).to.equal(true);
+      expect(everyContainsSomeTest.some(testingStr, predicate)).to.equal(true);
+      expect(everyContainsSomeTest.some(testingStr1, predicate)).to.equal(true);
+      expect(everyContainsSomeTest.some(testingStr2, predicate)).to.equal(false);
+      
+    });
   });
 });
