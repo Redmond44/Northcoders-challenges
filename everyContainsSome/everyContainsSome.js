@@ -14,7 +14,7 @@ var everyContainsSomeTest = {
     if (!predicate) predicate = function (num) { return num; };
     for (let prop in list) {
       const key = +prop || prop;
-      if (predicate(list[prop], key)) return true;
+      if (predicate(list[prop], key, list)) return true;
     }
     return false;
   }

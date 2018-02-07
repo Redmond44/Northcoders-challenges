@@ -157,7 +157,15 @@ describe('everyContainsSomeTest()', function () {
       expect(everyContainsSomeTest.some(testingStr, predicate)).to.equal(true);
       expect(everyContainsSomeTest.some(testingStr1, predicate)).to.equal(true);
       expect(everyContainsSomeTest.some(testingStr2, predicate)).to.equal(false);
-      
+    });
+    it('predicate takes a list as third argument', () => {
+      const predicate = function (num, i, list) { return num === list[i]; };
+      const testingArr = [2, 5, 6];
+      const testingObj = { a: 0, b: 4, c: 7 };
+      const testingStr = '2413';
+      expect(everyContainsSomeTest.some(testingArr, predicate)).to.equal(true);
+      expect(everyContainsSomeTest.some(testingObj, predicate)).to.equal(true);
+      expect(everyContainsSomeTest.some(testingStr, predicate)).to.equal(true);
     });
   });
 });
