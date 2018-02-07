@@ -130,5 +130,14 @@ describe('everyContainsSomeTest()', function () {
       expect(everyContainsSomeTest.some(testingStr, predicate)).to.equal(true);
       expect(everyContainsSomeTest.some(testingStr1, predicate)).to.equal(true);
     });
+    it('returns false if all of the values in the list not pass the predicate truth test', () => {
+      const predicate = function (num) { return num % 2 === 0; };
+      const testingArr = [3, 5, 7];
+      const testingObj = { a: 1, b: 11, c: 111 };
+      const testingStr = '975';
+      expect(everyContainsSomeTest.some(testingArr, predicate)).to.equal(false);
+      expect(everyContainsSomeTest.some(testingObj, predicate)).to.equal(false);
+      expect(everyContainsSomeTest.some(testingStr, predicate)).to.equal(false);
+    });
   });
 });
