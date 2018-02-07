@@ -115,5 +115,20 @@ describe('everyContainsSomeTest()', function () {
       expect(everyContainsSomeTest.some({ a: 0, b: null, c: undefined, d: false, e: '', f: NaN })).to.equal(false);
       expect(everyContainsSomeTest.some([null, undefined, 0, '', NaN, false])).to.equal(false);
     });
+    it('returns true if at least one of the values in the list pass the predicate truth test', () => {
+      const predicate = function (num) { return num % 2 === 0; };
+      const testingArr = [2, 4, 6];
+      const testingArr1 = [5, 4, 6];
+      const testingObj = { a: 0, b: 4, c: 6 };
+      const testingObj1 = { a: 0, b: 4, c: 7 };
+      const testingStr = '2460';
+      const testingStr1 = '2357';
+      expect(everyContainsSomeTest.some(testingArr, predicate)).to.equal(true);
+      expect(everyContainsSomeTest.some(testingArr1, predicate)).to.equal(true);
+      expect(everyContainsSomeTest.some(testingObj, predicate)).to.equal(true);
+      expect(everyContainsSomeTest.some(testingObj1, predicate)).to.equal(true);
+      expect(everyContainsSomeTest.some(testingStr, predicate)).to.equal(true);
+      expect(everyContainsSomeTest.some(testingStr1, predicate)).to.equal(true);
+    });
   });
 });
