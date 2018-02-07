@@ -99,5 +99,10 @@ describe('everyContainsSomeTest()', function () {
       expect(everyContainsSomeTest.some(0)).to.equal(false);
       expect(everyContainsSomeTest.some(NaN)).to.equal(false);
     });
+    it('returns false if an empty list argument given (no predicate)', () => {
+      expect(everyContainsSomeTest.some({})).to.equal(false);
+      expect(everyContainsSomeTest.some([])).to.equal(false);
+      expect(everyContainsSomeTest.some('')).to.equal(false);
+    });
   });
 });
