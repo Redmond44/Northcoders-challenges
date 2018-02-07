@@ -90,5 +90,14 @@ describe('everyContainsSomeTest()', function () {
     it('returns false if no arguments', () => {
       expect(everyContainsSomeTest.some()).to.equal(false);
     });
+    it('returns true if non-list argument given (no predicate)', () => {
+      expect(everyContainsSomeTest.some(null)).to.equal(false);
+      expect(everyContainsSomeTest.some(undefined)).to.equal(false);
+      expect(everyContainsSomeTest.some(true)).to.equal(false);
+      expect(everyContainsSomeTest.some(false)).to.equal(false);
+      expect(everyContainsSomeTest.some(23)).to.equal(false);
+      expect(everyContainsSomeTest.some(0)).to.equal(false);
+      expect(everyContainsSomeTest.some(NaN)).to.equal(false);
+    });
   });
 });
