@@ -104,5 +104,12 @@ describe('everyContainsSomeTest()', function () {
       expect(everyContainsSomeTest.some([])).to.equal(false);
       expect(everyContainsSomeTest.some('')).to.equal(false);
     });
+    it('returns true if at least one truthy element in the list (no predicate)', () => {
+      expect(everyContainsSomeTest.some({ a: 10 })).to.equal(true);
+      expect(everyContainsSomeTest.some({ a: 10, b: 0 })).to.equal(true);
+      expect(everyContainsSomeTest.some([1, 2, 3])).to.equal(true);
+      expect(everyContainsSomeTest.some([0, 2, 3])).to.equal(true);
+      expect(everyContainsSomeTest.some('apple')).to.equal(true);
+    });
   });
 });
