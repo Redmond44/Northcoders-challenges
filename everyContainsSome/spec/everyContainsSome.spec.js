@@ -111,5 +111,9 @@ describe('everyContainsSomeTest()', function () {
       expect(everyContainsSomeTest.some([0, 2, 3])).to.equal(true);
       expect(everyContainsSomeTest.some('apple')).to.equal(true);
     });
+    it('returns false if no truthy elements in the list (no predicate)', () => {
+      expect(everyContainsSomeTest.some({ a: 0, b: null, c: undefined, d: false, e: '', f: NaN })).to.equal(false);
+      expect(everyContainsSomeTest.some([null, undefined, 0, '', NaN, false])).to.equal(false);
+    });
   });
 });
