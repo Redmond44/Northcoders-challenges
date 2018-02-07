@@ -10,8 +10,8 @@ var everyContainsSomeTest = {
   contains: function () {
 
   },
-  some: function () {
-
+  some: function (list, predicate, context) {
+    return false;
   }
 };
 
