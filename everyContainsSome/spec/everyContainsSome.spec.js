@@ -100,6 +100,11 @@ describe('everyContainsSomeTest()', function () {
       expect(everyContainsSomeTest.contains(0)).to.equal(false);
       expect(everyContainsSomeTest.contains(NaN)).to.equal(false);
     });
+    it('returns false if an empty list argument given (no value)', () => {
+      expect(everyContainsSomeTest.contains({})).to.equal(false);
+      expect(everyContainsSomeTest.contains([])).to.equal(false);
+      expect(everyContainsSomeTest.contains('')).to.equal(false);
+    });
   });
 
   describe('some()', function () {
