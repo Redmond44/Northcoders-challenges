@@ -8,6 +8,11 @@ var everyContainsSomeTest = {
     return true;
   },
   contains: function (list, value, fromIndex) {
+    let values = [];
+    if (list !== null && typeof list === 'object' || typeof list === 'string') values = Object.values(list);
+    for (let i = 0; i < values.length; i++) {
+      if (values[i] === value) return true;
+    }
     return false;
   },
   some: function (list, predicate, context) {

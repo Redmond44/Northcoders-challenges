@@ -105,6 +105,18 @@ describe('everyContainsSomeTest()', function () {
       expect(everyContainsSomeTest.contains([])).to.equal(false);
       expect(everyContainsSomeTest.contains('')).to.equal(false);
     });
+    it('returns true if the value is present in the list', () => {
+      const testingArr = [2, 5, 6];
+      const testingObj = { a: 0, b: 4, c: 7 };
+      const testingStr = '123';
+      expect(everyContainsSomeTest.contains(testingArr, 5)).to.equal(true);
+      expect(everyContainsSomeTest.contains(testingArr, 8)).to.equal(false);
+      expect(everyContainsSomeTest.contains(testingObj, 7)).to.equal(true);
+      expect(everyContainsSomeTest.contains(testingObj, 3)).to.equal(false);
+      expect(everyContainsSomeTest.contains(testingStr, '3')).to.equal(true);
+      expect(everyContainsSomeTest.contains(testingStr, 3)).to.equal(false);
+      expect(everyContainsSomeTest.contains(testingStr, '7')).to.equal(false);
+    });
   });
 
   describe('some()', function () {
