@@ -7,8 +7,8 @@ var everyContainsSomeTest = {
     }
     return true;
   },
-  contains: function () {
-
+  contains: function (list, value, fromIndex) {
+    return false;
   },
   some: function (list, predicate, context) {
     if (!predicate) predicate = function (num) { return num; };

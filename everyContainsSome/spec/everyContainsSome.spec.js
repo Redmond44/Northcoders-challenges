@@ -86,11 +86,18 @@ describe('everyContainsSomeTest()', function () {
       expect(everyContainsSomeTest.every(testingStr, predicate)).to.equal(true);
     });
   });
+
+  describe('contains()', function () {
+    it('returns false if no arguments', () => {
+      expect(everyContainsSomeTest.contains()).to.equal(false);
+    });
+  });
+
   describe('some()', function () {
     it('returns false if no arguments', () => {
       expect(everyContainsSomeTest.some()).to.equal(false);
     });
-    it('returns true if non-list argument given (no predicate)', () => {
+    it('returns false if non-list argument given (no predicate)', () => {
       expect(everyContainsSomeTest.some(null)).to.equal(false);
       expect(everyContainsSomeTest.some(undefined)).to.equal(false);
       expect(everyContainsSomeTest.some(true)).to.equal(false);
