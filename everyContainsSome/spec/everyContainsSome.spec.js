@@ -91,6 +91,15 @@ describe('everyContainsSomeTest()', function () {
     it('returns false if no arguments', () => {
       expect(everyContainsSomeTest.contains()).to.equal(false);
     });
+    it('returns false if non-list argument given (no value)', () => {
+      expect(everyContainsSomeTest.contains(null)).to.equal(false);
+      expect(everyContainsSomeTest.contains(undefined)).to.equal(false);
+      expect(everyContainsSomeTest.contains(true)).to.equal(false);
+      expect(everyContainsSomeTest.contains(false)).to.equal(false);
+      expect(everyContainsSomeTest.contains(23)).to.equal(false);
+      expect(everyContainsSomeTest.contains(0)).to.equal(false);
+      expect(everyContainsSomeTest.contains(NaN)).to.equal(false);
+    });
   });
 
   describe('some()', function () {
