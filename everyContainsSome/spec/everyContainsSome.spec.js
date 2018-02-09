@@ -128,6 +128,9 @@ describe('everyContainsSomeTest()', function () {
       expect(everyContainsSomeTest.contains(testingStr, '2', 1)).to.equal(true);
       expect(everyContainsSomeTest.contains(testingArr, '2', 2)).to.equal(false);
     });
+    it('uses fromIndex equal 0 if given fromIndex is not a number', () => {
+      expect(everyContainsSomeTest.contains([1, 2, 3], 2, '5')).to.equal(true);
+    });
   });
 
   describe('some()', function () {

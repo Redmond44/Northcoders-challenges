@@ -1,5 +1,5 @@
 var everyContainsSomeTest = {
-  every: function (list, predicate, context) {
+  every: function (list, predicate) {
     if (!predicate) predicate = function (num) { return num; };
     for (let prop in list) {
       const key = +prop || prop;
@@ -8,7 +8,7 @@ var everyContainsSomeTest = {
     return true;
   },
   contains: function (list, value, fromIndex) {
-    if (!fromIndex) fromIndex = 0;
+    if (typeof fromIndex !== 'number') fromIndex = 0;
     let values = [];
     if (list !== null && typeof list === 'object' || typeof list === 'string') values = Object.values(list);
     for (let i = fromIndex; i < values.length; i++) {
@@ -16,7 +16,7 @@ var everyContainsSomeTest = {
     }
     return false;
   },
-  some: function (list, predicate, context) {
+  some: function (list, predicate) {
     if (!predicate) predicate = function (num) { return num; };
     for (let prop in list) {
       const key = +prop || prop;
