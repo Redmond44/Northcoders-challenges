@@ -8,9 +8,10 @@ var everyContainsSomeTest = {
     return true;
   },
   contains: function (list, value, fromIndex) {
+    if (!fromIndex) fromIndex = 0;
     let values = [];
     if (list !== null && typeof list === 'object' || typeof list === 'string') values = Object.values(list);
-    for (let i = 0; i < values.length; i++) {
+    for (let i = fromIndex; i < values.length; i++) {
       if (values[i] === value) return true;
     }
     return false;

@@ -117,6 +117,17 @@ describe('everyContainsSomeTest()', function () {
       expect(everyContainsSomeTest.contains(testingStr, 3)).to.equal(false);
       expect(everyContainsSomeTest.contains(testingStr, '7')).to.equal(false);
     });
+    it('uses fromIndex to start search at a given index', () => {
+      const testingArr = [2, 5, 6];
+      const testingObj = { a: 0, b: 4, c: 7 };
+      const testingStr = '123';
+      expect(everyContainsSomeTest.contains(testingArr, 5, 1)).to.equal(true);
+      expect(everyContainsSomeTest.contains(testingArr, 5, 2)).to.equal(false);
+      expect(everyContainsSomeTest.contains(testingObj, 4, 1)).to.equal(true);
+      expect(everyContainsSomeTest.contains(testingArr, 4, 2)).to.equal(false);
+      expect(everyContainsSomeTest.contains(testingStr, '2', 1)).to.equal(true);
+      expect(everyContainsSomeTest.contains(testingArr, '2', 2)).to.equal(false);
+    });
   });
 
   describe('some()', function () {
